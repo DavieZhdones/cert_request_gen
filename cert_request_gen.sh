@@ -86,12 +86,12 @@ not_specified="false"
 case "$argument" in
 	rsa)
 	request_template="rsa_"
-	request_command='openssl req -new -newkey rsa:${required_options["keylength"]} -sha256 -keyout "${OUTPUT_DIR}"/"${request_name}".key -config "${request_template}".template -out  "${OUTPUT_DIR}"/"${request_name}".csr -nodes 2>> ${ERROR_LOG}'
+	request_command='openssl req -new -newkey rsa:${required_options["keylength"]} -sha256 -keyout "${OUTPUT_DIR}"/"${request_name}".key -config "${request_template}".template -out  "${OUTPUT_DIR}"/"${request_name}".csr -nodes'
 	required_options["keylength"]="2048"
 	;;
 	gost)
 	request_template="gost_"
-	request_command='openssl req -new -newkey gost2012_${required_options["keylength"]} -pkeyopt paramset:${required_options["paramset"]} -keyout "${OUTPUT_DIR}"/"${request_name}".key -config "${request_template}".template -out  "${OUTPUT_DIR}"/"${request_name}".p10 -outform DER -nodes 2>> ${ERROR_LOG}'
+	request_command='openssl req -new -newkey gost2012_${required_options["keylength"]} -pkeyopt paramset:${required_options["paramset"]} -keyout "${OUTPUT_DIR}"/"${request_name}".key -config "${request_template}".template -out  "${OUTPUT_DIR}"/"${request_name}".p10 -outform DER -nodes'
 	required_options["keylength"]="256"
 	;;
 	help)
