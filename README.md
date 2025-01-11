@@ -1,6 +1,6 @@
 Project: cert_request_gen.sh
-Author: @AntonenkovArt
-Language: bash
+\nAuthor: @AntonenkovArt
+\nLanguage: bash
 
 This project is a wrapper to simplify the procedure of generating requests for "gosuslugi.ru" portal to issue TLS certificates.
 The project is based on OpenSSL with the pre-installed gost-engine package.
