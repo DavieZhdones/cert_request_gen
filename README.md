@@ -13,6 +13,7 @@ Using a text editor, you can change the request template in accordance with the 
 Distribution composition:
 cert_request_gen.sh - executable file, used to generate
 output - directory, containing key pairs and requests to issue certificates
+filepaths.conf - config with project filepaths
 rsa_dv.template - RSA DV certificate template
 rsa_ov_ip.template - RSA OV certificate template for IP
 rsa_ov_fl.template - RSA OV certificate template for FL
