@@ -1,0 +1,33 @@
+openssl_conf = openssl_init
+ 
+[ openssl_init ]
+stbl_section = stable_section
+ 
+[ req ]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+x509_extensions = v3_req
+prompt = no
+string_mask = utf8only
+utf8 = yes
+ 
+[ req_distinguished_name ]
+CN = mydomain.ru
+SN = Иванов
+GN = Иван Иванович
+C = RU
+OGRNIP = 123456789012345
+SNILS = 12345678901
+INN = 123456789012
+ 
+[ v3_req ]
+keyUsage = digitalSignature, keyEncipherment, keyAgreement
+extendedKeyUsage = serverAuth, clientAuth
+subjectAltName = DNS:mydomain.ru
+certificatePolicies = 1.2.643.2.25.1.14.2, 1.2.643.100.113.1, 1.2.643.100.113.2, 1.2.643.100.113.3, 1.2.643.100.113.4, 1.2.643.100.113.5
+subjectSignTool = HSM
+ 
+[ stable_section ]
+OGRNIP = min:15,max:15,mask:NUMERICSTRING,flags:nomask
+SNILS = min:11,max:11,mask:NUMERICSTRING,flags:nomask
+INN = min:12,max:12,mask:NUMERICSTRING,flags:nomask
