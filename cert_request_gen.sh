@@ -18,7 +18,7 @@ RSA options:
 -help                 Display help
 -type dv|ov           Validation type. Required.
 -declarant ip|fl|yl   Declarant type. Required for ov type, optional for dv.
--keylength 2048|4096  Keypair bit length. Optional. 256 set by default.
+-keylength 2048|4096  Keypair bit length. Optional. 2048 set by default.
 -count 1-100          Number of generated requests. Optional.
 EOF
 		;;
@@ -30,9 +30,9 @@ GOST options:
 -help                Display help
 -type dv|ov          Validation type. Required.
 -declarant ip|fl|yl  Declarant type. Required for ov type, optional for dv.
--keylength 256|512	 Keypair bit length. Optional. 256 set by default.
+-keylength 256|512   Keypair bit length. Optional. 256 set by default.
 -paramset XA|A|B     Keypair paramset. Optional. XA is default and the only variant for 256 keypair, A|B - for 512 keypair (A by default).
--count 1-100          Number of generated requests. Optional.
+-count 1-100         Number of generated requests. Optional.
 EOF
 		;;
 		*)
